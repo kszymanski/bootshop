@@ -66,7 +66,9 @@ gulp.task('fonts', function() {
 
 gulp.task('build',['bower','sass','fonts','usemin']);
 
-gulp.task('develop',['bower','sass', 'fontsDev', 'connectDev', 'watch']);
+gulp.task('buildDev',['bower','sass', 'fontsDev']);
+
+gulp.task('develop',['buildDev', 'connectDev', 'watch']);
 
 // default task
 gulp.task('default',['bower']);
