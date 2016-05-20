@@ -1,0 +1,21 @@
+{
+  "name": "bootstrapshop",
+  "version": "1.0.0",
+  "description": "Project responsivnes shop\\",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shop",
+    "responsivnes",
+    "bootstrap",
+    "angular"
+  ],
+  "author": "SzymonAK",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1"
+  }
+}
