@@ -20,7 +20,7 @@ gulp.task('usemin', function() {
     .pipe(usemin({
       js: [uglify()]
     }))
-    .pipe(gulp.dest('app/'));
+    .pipe(gulp.dest('Release/'));
 });
 
 gulp.task('sass', function () {
@@ -43,7 +43,7 @@ gulp.task('connectDev', function() {
 
 gulp.task('connect', function() {
   connect.server({
-    root: './app'
+    root: './Release'
   });
 });
 
@@ -61,7 +61,7 @@ gulp.task('fontsDev', function() {
 gulp.task('fonts', function() {
     return gulp.src([
                     './dev/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'])
-            .pipe(gulp.dest('./app/fonts/bootstrap'));
+            .pipe(gulp.dest('./Release/fonts/bootstrap'));
 });
 
 gulp.task('build',['bower','sass','fonts','usemin']);

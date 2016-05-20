@@ -37,7 +37,7 @@ jspm_packages
 .node_repl_history
 
 #app folder build by gulp and bower
-app/
+./app/
 dev/bower_components/
 dev/css/
 dev/fonts/
