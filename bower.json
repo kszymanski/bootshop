@@ -1,0 +1,32 @@
+{
+  "name": "bootstrapshop",
+  "description": "p",
+  "main": "",
+  "authors": [
+    "SzymonAK"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "shop",
+    "responsivnes",
+    "bootstrap",
+    "angular"
+  ],
+  "homepage": "https://github.com/kszymanski/bootshop",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./dev/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.2.3",
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "font-awesome": "^4.6.3"
+  }
+}

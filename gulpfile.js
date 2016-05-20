@@ -2,76 +2,71 @@
 var gulp = require('gulp');
 
 // plugins
-var connect = require('gulp-connect');
-var jshint = require('gulp-jshint');
+var wiredep = require('wiredep').stream;
+var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var connect = require('gulp-connect');
 
-// tasks
+
+gulp.task('bower', function () {
+  gulp.src('./dev/index.html')
+    .pipe(wiredep())
+  .pipe(gulp.dest('./dev'));
+});
+
+gulp.task('usemin', function() {
+  gulp.src('./dev/index.html')
+    .pipe(usemin({
+      js: [uglify()]
+    }))
+    .pipe(gulp.dest('app/'));
+});
+
 gulp.task('sass', function () {
-  gulp.src('./app/sass/**/*.scss')
+  return gulp.src('./dev/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./dev/css'));
 });
  
-gulp.task('sass:watch', function () {
-  gulp.watch('./app/sass/**/*.scss', ['sass']);
+gulp.task('watch', function () {	
+  gulp.watch('./dev/sass/**/*.scss', ['sass', 'htmlReload']);
+  gulp.watch(['./dev/**/*.html'], ['htmlReload']);
 });
-gulp.task('lint', function() {
-  gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'));
-});
-gulp.task('clean', function() {
-    gulp.src('./dist/*')
-      .pipe(clean({force: true}));
-});
-gulp.task('minify-css', function() {
-  var opts = {comments:true,spare:true};
-  gulp.src(['./app/**/*.css', '!./app/bower_components/**'])
-    .pipe(minifyCSS(opts))
-    .pipe(gulp.dest('./dist/'))
-});
-gulp.task('minify-js', function() {
-  gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
-    .pipe(uglify({
-      // inSourceMap:
-      // outSourceMap: "app.js.map"
-    }))
-    .pipe(gulp.dest('./dist/'))
-});
-gulp.task('copy-bower-components', function () {
-  gulp.src('./app/bower_components/**')
-    .pipe(gulp.dest('dist/bower_components'));
-});
-gulp.task('copy-html-files', function () {
-  gulp.src('./app/**/*.html')
-    .pipe(gulp.dest('dist/'));
-});
-gulp.task('connect', function () {
+
+gulp.task('connectDev', function() {
   connect.server({
-    root: 'app/',
-    port: 8888
-  });
-});
-gulp.task('connectDist', function () {
-  connect.server({
-    root: 'dist/',
-    port: 9999
+    root: './dev',
+    livereload: true
   });
 });
 
+gulp.task('connect', function() {
+  connect.server({
+    root: './app'
+  });
+});
+
+gulp.task('htmlReload', function () {
+  gulp.src('./dev/*.html')
+    .pipe(connect.reload());
+});
+
+// Fonts
+gulp.task('fontsDev', function() {
+    return gulp.src(['./dev//bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'])
+            .pipe(gulp.dest('./dev/fonts/bootstrap'));
+});
+
+gulp.task('fonts', function() {
+    return gulp.src([
+                    './dev/bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*'])
+            .pipe(gulp.dest('./app/fonts/bootstrap'));
+});
+
+gulp.task('build',['bower','sass','fonts','usemin']);
+
+gulp.task('develop',['bower','sass', 'fontsDev', 'connectDev', 'watch']);
 
 // default task
-gulp.task('default',
-  ['lint', 'connect']
-);
-gulp.task('build', function() {
-  runSequence(
-    ['clean'],
-    ['lint', 'minify-css', 'minify-js', 'copy-html-files', 'copy-bower-components', 'connectDist']
-  );
-});
+gulp.task('default',['bower']);
