@@ -1,7 +1,9 @@
 'use strict'
-var app = angular.module('bootshop',['ui.router']);
+var app = angular.module('bootshop',['ui.router', 'ngResource']);
 
-app.config(function($stateProvider){
+app.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise('/home/');
+	
 	$stateProvider.state('index',{
 		abstract: true,
 		views:{

@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "Diabelski pomiot",
+		"category": 1,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://vignette3.wikia.nocookie.net/flylikeabird3/images/3/3b/Hamburger.jpg/revision/latest?cb=20140610172401"
+	},
+	{
+		"id": 2,
+		"name": "Diabelski pomiot",
+		"category": 1,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://vignette3.wikia.nocookie.net/flylikeabird3/images/3/3b/Hamburger.jpg/revision/latest?cb=20140610172401"
+	}
+]

@@ -1,7 +1,7 @@
 app.config(function($stateProvider){
 	$stateProvider.state('index.hompeage',{
 		parent: "index",
-		url: "",
+		url: "/home/:category",
 		views:{
 			"content@": { 
 				templateUrl: "/scripts/app/homepage/homepage.html",

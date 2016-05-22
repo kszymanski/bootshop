@@ -40,5 +40,7 @@ jspm_packages
 #app folder build by gulp and bower
 Release/
 dev/bower_components/
-dev/css/
+!dev/css/
+dev/css/*
+!dev/css/vendor/
 dev/fonts/
