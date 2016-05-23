@@ -64,7 +64,13 @@ gulp.task('fonts', function() {
             .pipe(gulp.dest('./Release/fonts/bootstrap'));
 });
 
-gulp.task('build',['bower','sass','fonts','usemin']);
+gulp.task('copy', function() {
+    return gulp.src([
+                    './dev/scripts/**/*.html'])
+            .pipe(gulp.dest('./Release/scripts'));
+});
+
+gulp.task('build',['bower','sass','fonts','copy','usemin']);
 
 gulp.task('buildDev',['bower','sass', 'fontsDev']);
 

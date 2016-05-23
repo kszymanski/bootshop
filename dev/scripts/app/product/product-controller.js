@@ -1,7 +1,11 @@
 app.controller('ProductController',function($scope, $stateParams, Products){
-	$scope.products = Products.get();
+	$scope.product = {};
+	Products.get(function(results){
+		results.forEach(function(entry){
+			if(entry.id == $stateParams.product){
+				$scope.product = entry;
+			}
+		});
+	});
 	
-	$scope.displayProduct = function(id){
-		return !$stateParams.category || id == $stateParams.category;	
-	};
 });
