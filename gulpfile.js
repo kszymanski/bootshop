@@ -18,7 +18,8 @@ gulp.task('bower', function () {
 gulp.task('usemin', function() {
   gulp.src('./dev/index.html')
     .pipe(usemin({
-      js: [uglify()]
+      js: [uglify()],
+	  appjs: ['concat']
     }))
     .pipe(gulp.dest('Release/'));
 });
@@ -71,7 +72,13 @@ gulp.task('copy', function() {
             .pipe(gulp.dest('./Release/scripts'));
 });
 
-gulp.task('build',['bower','sass','fonts','copy','usemin']);
+gulp.task('copydata', function() {
+    return gulp.src([
+                    './dev/data/**/*.json'])
+            .pipe(gulp.dest('./Release/data'));
+});
+
+gulp.task('build',['bower','sass','fonts','copy','copydata', 'usemin']);
 
 gulp.task('buildDev',['bower','sass', 'fontsDev']);
 
