@@ -6,15 +6,123 @@
 		"price": 25.35,
 		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
 		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
-		"picture": "http://vignette3.wikia.nocookie.net/flylikeabird3/images/3/3b/Hamburger.jpg/revision/latest?cb=20140610172401"
+		"picture": "http://smokeybones.com/wp-content/uploads/2015/11/smokehouse-burger.jpg"
 	},
 	{
 		"id": 2,
-		"name": "Diabelski pomiot",
+		"name": "Ino biff",
 		"category": 1,
 		"price": 25.35,
 		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
 		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
-		"picture": "http://vignette3.wikia.nocookie.net/flylikeabird3/images/3/3b/Hamburger.jpg/revision/latest?cb=20140610172401"
+		"picture": "http://smokeybones.com/wp-content/uploads/2015/11/smokehouse-burger.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Dabel bekon",
+		"category": 1,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://smokeybones.com/wp-content/uploads/2015/11/smokehouse-burger.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Klasik USA",
+		"category": 1,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://smokeybones.com/wp-content/uploads/2015/11/smokehouse-burger.jpg"
+	},
+	{
+		"id": 5,
+		"name": "2 parówy",
+		"category": 2,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "https://storage.googleapis.com/srscontent/images/ecom/categories/hotdogmerchandizers.jpg"
+	},
+	{
+		"id": 6,
+		"name": "Musztard drim",
+		"category": 2,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "https://storage.googleapis.com/srscontent/images/ecom/categories/hotdogmerchandizers.jpg"
+	},
+	{
+		"id": 7,
+		"name": "Amerykanski",
+		"category": 2,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "https://storage.googleapis.com/srscontent/images/ecom/categories/hotdogmerchandizers.jpg"
+	},
+	{
+		"id": 8,
+		"name": "Kartofle",
+		"category": 4,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://www.pizzakaya.com/wp-content/uploads/2015/02/1-_MG_5154-300x150.jpg"
+	},
+	{
+		"id": 9,
+		"name": "Pieronskie frajsy",
+		"category": 4,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://www.pizzakaya.com/wp-content/uploads/2015/02/1-_MG_5154-300x150.jpg"
+	},
+	{
+		"id": 10,
+		"name": "Cosnek",
+		"category": 4,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://www.pizzakaya.com/wp-content/uploads/2015/02/1-_MG_5154-300x150.jpg"
+	},
+	{
+		"id": 11,
+		"name": "Łosto zapiekana",
+		"category": 3,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://s.babyonline.pl/i/kanapka-bagietka-zapiekanka-sandwich-pomidor-mozzarella-ser-bazylia-pesto-LIST_BOX-26048.jpg"
+	},
+	{
+		"id": 12,
+		"name": "Na czoskowo",
+		"category": 3,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://s.babyonline.pl/i/kanapka-bagietka-zapiekanka-sandwich-pomidor-mozzarella-ser-bazylia-pesto-LIST_BOX-26048.jpg"
+	},
+	{
+		"id": 13,
+		"name": "Na bogato",
+		"category": 3,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://s.babyonline.pl/i/kanapka-bagietka-zapiekanka-sandwich-pomidor-mozzarella-ser-bazylia-pesto-LIST_BOX-26048.jpg"
+	},
+	{
+		"id": 14,
+		"name": "Klasik drim",
+		"category": 3,
+		"price": 25.35,
+		"shortDesc": "Ostre papryczki czilli i tabasko rozpalą twoje podniebienie",
+		"description": "Na bułkach z diabelnych czelusci podwojnym serze i ostrych dodatkach niebo w gebie piekło w ...",
+		"picture": "http://s.babyonline.pl/i/kanapka-bagietka-zapiekanka-sandwich-pomidor-mozzarella-ser-bazylia-pesto-LIST_BOX-26048.jpg"
 	}
 ]

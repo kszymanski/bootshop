@@ -4,5 +4,6 @@ app.controller('AboutController', function ($scope, $state) {
 	
 	$scope.send = function (email){
 		$state.go('index.about.sent', {email : email});
+		$scope.email = null;
 	};
 });
