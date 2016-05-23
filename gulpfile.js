@@ -78,7 +78,7 @@ gulp.task('copydata', function() {
             .pipe(gulp.dest('./Release/data'));
 });
 
-gulp.task('build',['bower','sass','fonts','copy','copydata', 'usemin']);
+gulp.task('build',['bower','sass', 'fonts','copy','copydata', 'usemin']);
 
 gulp.task('buildDev',['bower','sass', 'fontsDev']);
 

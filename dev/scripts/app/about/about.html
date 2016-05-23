@@ -1,31 +1,51 @@
 <div class="featurette" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://bi.gazeta.pl/im/2/8159/z8159032Q,Sztucce-przymocowane-lancuchem-do-stolu-moga-nie-s.jpg">
-            <h2 class="featurette-heading">Boot shoop
+	<img class="featurette-image img-circle img-responsive pull-right" src="http://bi.gazeta.pl/im/2/8159/z8159032Q,Sztucce-przymocowane-lancuchem-do-stolu-moga-nie-s.jpg">
+	<h2 class="featurette-heading">Boot shoop
             </h2>
-            <p class="lead">Stołówka fastfóód przez internety dla was zawsze co dzień najlepsza kawa lalala.</p>
-        </div>
-<hr class="featurette-divider">
-<div class="row">
-	<div class="col-md-6">
-	<div class="featurette">
-		<h2 class="featurette-heading">Lokalizacja</h2>
-		<p class="lead">znajdziesz nas w instytucie na dole w kafejce</p>
-	</div>
-		</div>
-	<div class="col-md-6">
-	<div class="embed-responsive embed-responsive-4by3">
-		<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=wiinom&key=AIzaSyBHdF4NZBQAXyd7FctM8aZlrFaMZCM7EP0" allowfullscreen></iframe>
-	</div>
-		</div>
+	<p class="lead">Stołówka fastfóód przez internety dla was zawsze co dzień najlepsza kawa lalala.</p>
 </div>
 <hr class="featurette-divider">
-<!-- Second Featurette -->
-<div class="featurette">
-	<img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
-	<h2 class="featurette-heading">The Second Heading
-                    
-                <span class="text-muted">Is Pretty Cool Too.</span>
-            </h2>
-	<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+<div class="row">
+	<div class="col-md-4">
+		<div class="featurette">
+			<h2 class="featurette-heading">Lokalizacja</h2>
+			<p class="lead">znajdziesz nas w instytucie na dole w kafejce</p>
+		</div>
+	</div>
+	<div class="col-md-8">
+		<div class="embed-responsive embed-responsive-4by3">
+			<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=wiinom&key=AIzaSyBHdF4NZBQAXyd7FctM8aZlrFaMZCM7EP0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+<hr class="featurette-divider">
+<div class="row">
+	<div class="col-md-8">
+		<form role="form" name="contactForm">
+			<div class="form-group" ng-class="{error: contactForm.name.$invalid}">
+				<label>Full Name</label>
+				<input class="form-control" type="text" name="name" ng-model="email.name" required="required" placeholder="Your name">
+				<span class="help-block" ng-show="contactForm.name.$error.required">Required</span>
+			</div>
+			<div class="form-group" ng-class="{error: contactForm.email.$invalid}">
+				<label>Email</label>
+				<input class="form-control" type="email" name="email" ng-model="email.address" required="required" placeholder="Your email address">
+				<span class="help-block" ng-show="contactForm.email.$error.required">Required</span>
+				<span class="help-block" ng-show="contactForm.email.$error.email">Invalid email address</span>
+			</div>
+			<div class="form-group" ng-class="{error: contactForm.message.$invalid}">
+				<label>Message</label>
+				<textarea class="form-control" rows="5" name="message" ng-model="email.body" required="required" placeholder="Your messsage"></textarea>
+				<span class="help-inline" ng-show="contactForm.message.$error.required">Required</span>
+			</div>
+			<button type="button" class="btn btn-primary btn-lg btn-block" ng-click="send(email)" ng-disabled="contactForm.$invalid">Send</button>
+		</form>
+	</div>
+	<div class="col-md-4">
+		<div class="featurette">
+			<h2 class="featurette-heading">Zapytaj Nas!</h2>
+			<p class="lead">Nie jesteś pewien zadaj pytanie.</p>
+		</div>
+	</div>
 </div>
 <hr class="featurette-divider">

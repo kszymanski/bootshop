@@ -1,5 +1,5 @@
 'use strict'
-var app = angular.module('bootshop',['ui.router', 'ngResource']);
+var app = angular.module('bootshop',['ui.router', 'ngResource', 'ui.bootstrap']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise('/home/');
