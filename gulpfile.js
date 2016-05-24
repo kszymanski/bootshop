@@ -7,6 +7,7 @@ var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
+var rev = require('gulp-rev');
 
 
 gulp.task('bower', function () {
@@ -18,7 +19,7 @@ gulp.task('bower', function () {
 gulp.task('usemin', function() {
   gulp.src('./dev/index.html')
     .pipe(usemin({
-      js: [uglify()],
+      js: [uglify(), rev()],
 	  appjs: ['concat']
     }))
     .pipe(gulp.dest('Release/'));
