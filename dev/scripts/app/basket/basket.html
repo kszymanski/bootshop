@@ -11,12 +11,12 @@
 			<li ng-repeat="b in items" class="row">
 				<span class="quantity">{{b.quantity}}</span>
 				<span class="itemName">{{b.product.name}}</span>
-				<span class="popbtn"><a class="arrow"></a></span>
+				<span class="popbtn" ><a href ng-click="remove(b)"><span class="glyphicon glyphicon-remove"></span></a></span>
 				<span class="price">{{b.product.price * b.quantity}} PLN</span>
 			</li>
 			<li class="row totals">
 				<span class="itemName">Total:</span>
-				<span class="price">$1694.43</span>
+				<span class="price">{{pay()}}</span>
 				<span class="order"> <a class="text-center">ORDER</a></span>
 			</li>
 		</ul>
@@ -26,7 +26,6 @@
 
 <!-- The popover content -->
 
-<div id="popover" style="display: none">
-	<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
-	<a href="#"><span class="glyphicon glyphicon-remove"></span></a>
-</div>
+<script type="text/ng-template" id="myPopoverTemplate.html">
+	<a href><span class="glyphicon glyphicon-remove"></span></a>
+</script>

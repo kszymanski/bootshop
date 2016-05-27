@@ -1,5 +1,6 @@
 <div class="row">
 	<div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="product in products" ng-show="displayProduct(product.category)">
+
 		<div class="thumbnail">
 			<img ng-src="{{product.picture}}" alt="">
 			<div class="caption">
@@ -8,9 +9,6 @@
                                 </h4>
 				<p>{{product.shortDesc}}</p>
 			</div>
-			<div>
-				<button class="btn btn-primary" ng-click="addToBasket(product)">Buy</button>
-			</div>
-		</div>
 	</div>
+</div>
 </div>

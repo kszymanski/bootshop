@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider.state('index',{
 		abstract: true,
 		views:{
-			"navigation@": { templateUrl: "/scripts/app/navigation/main_navigation.html" },
+			"navigation@": { templateUrl: "/scripts/app/navigation/main_navigation.html", controller: "NavController" },
 			"footer@": { templateUrl: "/scripts/app/footer/main_footer.html" }
 		}
 	});

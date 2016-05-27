@@ -11,6 +11,15 @@ app.service("Basket", function($rootScope) {
 			localStorage.setItem("cart", angular.toJson(cart));
 			$rootScope.$broadcast("cartContentsChanged");
 		};
+	
+		this.removeProduct = function(product) {
+			if (!!cart[product.id]) {
+				delete cart[product.id];
+			}
+
+			localStorage.setItem("cart", angular.toJson(cart));
+			$rootScope.$broadcast("cartContentsChanged");
+		};
 
 		this.removeAll = function() {
 			cart = {};
