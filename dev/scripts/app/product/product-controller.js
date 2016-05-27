@@ -8,7 +8,7 @@ app.controller('ProductController',function($scope, $stateParams, Products, Bask
 		});
 	});
 	
-	$scope.addToBasket = function(product){
+	$scope.addToCart = function(product){
 		Basket.addProduct(product);
 	};
 });
