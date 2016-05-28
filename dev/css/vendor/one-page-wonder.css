@@ -113,7 +113,7 @@ footer {
 
 @media(max-width:768px) {
     .container {
-        margin: 0 15px;
+        margin: 0 0;
     }
 
     .featurette-divider {

@@ -190,11 +190,12 @@ ul{
 /* Mobile device size */
 
 @media (max-width: 768px) {
-
-	.navbar{ 
-		padding:10px 0;
+	body{
+		margin-top: 10px;
 	}
-	
+	.navbar a{
+		padding: 22px;
+	}
 	.minicart{
 		margin-right: -1px;
 		padding-right: 0;
@@ -215,12 +216,12 @@ ul{
 
 	.col-md-7.col-sm-12{
 		padding-left: 0;
-		padding-right: 15px;
+		padding-right: 0;
 		margin-bottom: 32px;
 	}
 
 	.col-md-7.col-sm-12 ul{
-		padding-left: 15px ;
+		padding-left: 0 ;
 	}
 
 	.columnCaptions span{

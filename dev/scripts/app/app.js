@@ -12,3 +12,19 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 	});
 });
+
+app.run(['$rootScope', '$state', 'Users', function($rootScope, $state, User)
+{
+
+  $rootScope.$on('$stateChangeStart'
+    , function(event, toState, toParams, fromState, fromParams) {
+
+    var isAuthenticationRequired =  !!toState.data && toState.data.requiresLogin && !!!$rootScope.user;
+
+    if(isAuthenticationRequired)
+    {
+      event.preventDefault();
+      $state.go('index.login');
+    }
+  });
+}])
