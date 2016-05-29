@@ -22,14 +22,14 @@ body {
 }
 
 .caption {
-    height: 130px;
+   
     overflow: hidden;
 }
 
 .caption h4 {
     white-space: nowrap;
 }
-
+.product img,
 .thumbnail img {
     width: 100%;
 }
@@ -41,6 +41,7 @@ body {
 }
 
 .thumbnail {
+	height: 300px;
     padding: 0;
 }
 

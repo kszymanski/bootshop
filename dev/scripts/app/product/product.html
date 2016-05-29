@@ -1,15 +1,28 @@
-<div class="col-md-8">
-	<div class="thumbnail">
-		<img class="img-responsive" ng-src="{{product.picture}}" alt="">
-		<div class="caption-full">
-			<hr></hr>
-			<h4 class="pull-right">{{product.price}} PLN</h4>
-			<h4>{{product.name}}</h4>
-			<p>{{product.shortDesc}}</p>
-			<p>{{product.description}}</p>
+<div class="row">
+	<div class="col-md-12">
+		<div class="product">
+			<div class="row">
+				<div class="col-md-12">
+					<img class="img-responsive" ng-src="{{product.picture}}" alt="">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="caption-full">
+						<hr></hr>
+						<h4 class="pull-right">{{product.price}} PLN</h4>
+						<h4>{{product.name}}</h4>
+						<p>{{product.shortDesc}}</p>
+						<hr>
+						<p>{{product.description}}</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
-<div class="col-md-1">
-	<button class="btn btn-primary" ng-click="addToCart(product)">Add</button>
+<div class="row">
+	<div class="col-md-3 col-md-offset-9">
+		<button class="btn btn-primary btn-lg" ng-click="addToCart(product)">Add to basket</button>
+	</div>
 </div>

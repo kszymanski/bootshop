@@ -1,18 +1,18 @@
 <div class="container text-center">
-	<div class="col-md-7 col-sm-12 text-left">
+	<div class="col-md-7 col-sm-12 text-left basket">
 		<ul>
-			<li class="row list-inline columnCaptions">
+			<li class="row basket-row list-inline columnCaptions">
 				<span>QTY</span>
 				<span>ITEM</span>
 				<span>Price</span>
 			</li>
-			<li ng-repeat="b in items" class="row">
+			<li ng-repeat="b in items" class="row basket-row">
 				<span class="quantity">{{b.quantity}}</span>
 				<span class="itemName">{{b.product.name}}</span>
 				<span class="popbtn" ><a href ng-click="remove(b)"><span class="glyphicon glyphicon-remove"></span></a></span>
-				<span class="price">{{b.product.price * b.quantity}} PLN</span>
+				<span class="price">{{ round(b.product.price * b.quantity) }} PLN</span>
 			</li>
-			<li class="row totals">
+			<li class="row basket-row totals">
 				<span class="itemName">Total:</span>
 				<span class="price">{{pay()}}</span>
 				<span class="order"> <a class="text-center">ORDER</a></span>
@@ -21,9 +21,3 @@
 	</div>
 
 </div>
-
-<!-- The popover content -->
-
-<script type="text/ng-template" id="myPopoverTemplate.html">
-	<a href><span class="glyphicon glyphicon-remove"></span></a>
-</script>

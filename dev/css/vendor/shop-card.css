@@ -11,12 +11,12 @@ ul{
 	Cart items list
 -----------------------------------*/
 
-.col-md-7.col-sm-12{
+.basket{
 	padding-left: 50px ;
 	margin-bottom: 72px;
 }
 
-.row{
+.basket-row{
 	box-shadow: 0 1px 0 #e1e5e8;
 	padding-bottom :0;
 	padding-left: 15px;
@@ -25,7 +25,7 @@ ul{
 
 }
 
-.row span{
+.basket-row span{
 	padding: 20px 0 6px 0;
 }
 

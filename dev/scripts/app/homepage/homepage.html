@@ -2,13 +2,33 @@
 	<div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="product in products" ng-show="displayProduct(product.category)">
 
 		<div class="thumbnail">
-			<img ng-src="{{product.picture}}" alt="">
-			<div class="caption">
-				<h4 class="pull-right">{{product.price}} PLN</h4>
-				<h4><a ui-sref="index.product({product: product.id})">{{product.name}}</a>
-                                </h4>
-				<p>{{product.shortDesc}}</p>
+			<div class="row">
+				<div class="col-md-12">
+					<img ng-src="{{product.picture}}" alt="">
+				</div>
 			</div>
+			<div class="caption">
+				<div class="row">
+					<div class="col-md-8">
+						<h4><a ui-sref="index.product({product: product.id})">{{product.name}}</a></h4>
+					</div>
+					<div class="col-md-4">
+						<h4 class="pull-right">{{product.price}} PLN</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>{{product.shortDesc}}</p>
+
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-md-offset-8">
+						<button class="btn btn-primary" ng-click="addToCart(product)">Add</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
 </div>
