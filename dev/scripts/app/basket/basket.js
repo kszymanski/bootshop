@@ -6,7 +6,8 @@ app.config(function($stateProvider){
 			"content@": { 
 				templateUrl: "/scripts/app/basket/basket.html",
 				controller: "BasketController"
-			}
+			},
+			"menu@": {}
 		}
 	});
 });

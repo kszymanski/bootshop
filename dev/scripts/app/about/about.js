@@ -6,7 +6,8 @@ app.config(function($stateProvider){
 			"content@": { 
 				templateUrl: "/scripts/app/about/about.html",
 				controller: "AboutController"
-			}
+			},
+			"menu@": {}
 		}
 	}).state('index.about.sent', {
             parent: 'index.about',

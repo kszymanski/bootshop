@@ -1,0 +1,56 @@
+<div class="row">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="text-center"><strong>Order summary</strong></h3>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-condensed">
+						<thead>
+							<tr>
+								<td><strong>Item Name</strong></td>
+								<td class="text-center"><strong>Item Price</strong></td>
+								<td class="text-center"><strong>Item Quantity</strong></td>
+								<td class="text-right"><strong>Total</strong></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="b in items">
+								<td>{{b.product.name}}</td>
+								<td class="text-center">{{b.product.price}} PLN</td>
+								<td class="text-center">{{b.quantity}}</td>
+								<td class="text-right">{{ round(b.product.price * b.quantity) }} PLN</td>
+							</tr>
+							<tr>
+								<td class="highrow"></td>
+								<td class="highrow"></td>
+								<td class="highrow text-center"><strong>Subtotal</strong></td>
+								<td class="highrow text-right">{{pay()}} PLN</td>
+							</tr>
+							<tr>
+								<td class="emptyrow"></td>
+								<td class="emptyrow"></td>
+								<td class="emptyrow text-center"><strong>Shipping</strong></td>
+								<td class="emptyrow text-right">FREE</td>
+							</tr>
+							<tr>
+								<td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>
+								<td class="emptyrow"></td>
+								<td class="emptyrow text-center"><strong>Total</strong></td>
+								<td class="emptyrow text-right">{{pay()}} PLN</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-4 pull-right">
+		<button class="btn btn-success btn-lg" ng-click="go()">CONFIRM!</button>
+		<button class="btn btn-danger btn-lg" ui-sref="index.hompeage">No Thanks!</button>
+	</div>
+</div>

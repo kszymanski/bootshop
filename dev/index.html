@@ -39,12 +39,7 @@
 	<div class="container">
 
 		<div class="row">
-
-			<div class="col-md-3">
-				<p class="lead">Boot Shop</p>
-				<categories-list></categories-list>
-			</div>
-
+			<div ui-view="menu" class="col-md-3"></div>
 			<div ui-view="content" class="col-md-9"></div>
 		</div>
 	</div>
@@ -86,6 +81,9 @@
 	<script src="scripts/app/product/product-controller.js"></script>
 	<script src="scripts/app/basket/basket.js"></script>
 	<script src="scripts/app/basket/basket-controller.js"></script>
+	<script src="scripts/app/order/order.js"></script>
+	<script src="scripts/app/order/order-controller.js"></script>
+	<script src="scripts/app/order/order-final-controller.js"></script>
 	<!-- endbuild -->
 </body>
 

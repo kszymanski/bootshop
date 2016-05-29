@@ -8,6 +8,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		abstract: true,
 		views:{
 			"navigation@": { templateUrl: "/scripts/app/navigation/main_navigation.html", controller: "NavController" },
+			"menu@": { templateUrl: "/scripts/app/navigation/right-menu.html"},
 			"footer@": { templateUrl: "/scripts/app/footer/main_footer.html" }
 		}
 	});
