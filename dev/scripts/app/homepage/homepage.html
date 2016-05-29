@@ -1,5 +1,6 @@
 <div class="row">
 	<div class="col-sm-4 col-lg-4 col-md-4" ng-repeat="product in products" ng-show="displayProduct(product.category)">
+<div class="clearfix" ng-if="$index % 3 == 0"></div>
 
 		<div class="thumbnail">
 			<div class="row">
@@ -13,7 +14,7 @@
 						<h4><a ui-sref="index.product({product: product.id})">{{product.name}}</a></h4>
 					</div>
 					<div class="col-md-4">
-						<h4 class="pull-right">{{product.price}} PLN</h4>
+						<h5 class="pull-right">{{product.price}} PLN</h5>
 					</div>
 				</div>
 				<div class="row">
