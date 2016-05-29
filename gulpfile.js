@@ -20,7 +20,7 @@ gulp.task('usemin', function() {
   gulp.src('./dev/index.html')
     .pipe(usemin({
       js: [uglify(), rev()],
-	  appjs: ['concat']
+	  appjs: ['concat', rev()]
     }))
     .pipe(gulp.dest('Release/'));
 });
