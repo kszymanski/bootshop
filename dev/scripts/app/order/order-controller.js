@@ -1,6 +1,6 @@
 app.controller('OrderController', function ($scope, $rootScope, $timeout, Basket, toastr) {
 	$scope.items = Basket.getProducts();
-	$scope.user = $rootScope.user;
+	$scope.registerAccount = $rootScope.user;
 	
 	$scope.pay = function(){
 		var sum = 0;
